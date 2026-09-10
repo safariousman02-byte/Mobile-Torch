@@ -1,0 +1,44 @@
+body {
+    background: #1a1a1a;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+}
+
+.container {
+    max-width: 300px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    background: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.on {
+    background: #fff;
+    box-shadow: 0 0 30px #ffcc00;
+}
+
+#status {
+    margin-top: 20px;
+    color: #888;
+}
