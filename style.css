@@ -57,3 +57,32 @@ body {
     color: blue;
     background: #e0e5ec;
 }
+
+.text1 h1{
+    font-size: 30px;
+}
+
+.text1 p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(240, 89, 34);
+    gap: 3%;
+    font-size: 14px;
+}
+
+.text1 p span {
+    justify-content: left;
+    width: 10px;
+    height: 10px;
+    background: orangered;
+    border-radius: 20px;
+    animation: blink 1s infinite;
+}
+
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+}
