@@ -22,3 +22,44 @@ if ("AmbientLightSensor" in window) {
 const time = document.querySelector("#val1")
 const timeL = new Date();
 time.textContent = timeL.toLocaleTimeString();
+
+const torchBtn = document.querySelector(".torch")
+
+let isOn = false;
+let stream = null;
+let track = null;
+torchBtn.addEventListener("click", async () => {
+    
+    try {
+        if(!isOn) {
+
+            stream = await navigator.mediaDevices.getUserMedia({
+                video: {facingMode: 'envireonment'}
+            });
+
+            track = stream.getVideoTracks()[0];
+            
+            await track.applyConstraints({
+                advanced: [{torch: true}]
+            });
+
+            isOn = true;
+
+        } else {
+            if (track) {
+               await track.applyConstraints({
+                advanced: [{torch: true}]
+            });
+            
+                if (sream) {
+                    stream.getTracks().forEach(el => {
+                        el.stop()
+                    });
+                }
+                isOn = false;
+            }
+        }
+    }catch (error){
+        console.log(error)
+    }
+})
