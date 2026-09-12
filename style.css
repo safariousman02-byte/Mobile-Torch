@@ -21,7 +21,13 @@ body {
 }
 
 .container {
-    margin: 50px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,4 +91,35 @@ body {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50%      { opacity: 0; }
+}
+ 
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.plof {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    width: 130px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid #cbced1;
+    color: black;
+    background: #e0e5ec;
+    box-shadow: 12px 12px 24px #cbced1, -12px -12px 24px #ffffff;
+
+}
+.val {
+    font-weight: bold;
+    font-size: 15px;
 }
