@@ -1,166 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumos Torch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lumos Torch</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
-        <!-- ===== HEADER ===== -->
-        <header class="header">
-            <div class="logo">
-                <div class="logo-icon">💡</div>
-                <div>
-                    <h1>Lumos Torch</h1>
-                    <p>TORCH</p>
-                </div>
-            </div>
-            <div class="header-right">
-                <span class="pill">● READY</span>
-                <span class="pill">🔋 94%</span>
-                <div class="avatar">👤</div>
-            </div>
-        </header>
+    </head>
+    <body>
+        <div class="app">
 
-        <!-- ===== STATS CARDS ===== -->
-        <div class="stats">
-            <div class="stat-card">
-                <span class="stat-label">🌡️ THERMAL</span>
-                <strong>31.4°C •</strong>
-                <p>Normal</p>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">⚡ POWER</span>
-                <strong>94% (4.1V)</strong>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">📷 CAMERA LED</span>
-                <p class="active">● Active</p>
-            </div>
-        </div>
-
-        <!-- ===== POWER BUTTON ===== -->
-        <div class="power-section">
-            <div class="power-ring">
-                <div class="power-circle">
-                    <div class="power-icon">⏻</div>
-                </div>
-            </div>
-            <p class="power-label">POWER ON</p>
-            <div class="runtime-pill">🔄 Est. Runtime: 4h 18m remaining</div>
-        </div>
-
-        <!-- ===== LED OUTPUT LUMENS ===== -->
-        <div class="card">
-            <div class="card-header">
-                <span>📊 LED OUTPUT LUMENS</span>
-                <span class="highlight">100% MAX</span>
-            </div>
-            <div class="presets">
-                <button>25%</button>
-                <button>50%</button>
-                <button>75%</button>
-                <button class="active">MAX</button>
-            </div>
-            <div class="slider-track">
-                <div class="slider-fill"></div>
-            </div>
-        </div>
-
-        <!-- ===== MODES ===== -->
-        <div class="modes">
-            <div class="mode-card">
-                <div class="mode-icon">SOS</div>
-                <strong>SOS Morse</strong>
-                <p>Hardware 3-3-3 Pulse</p>
-            </div>
-            <div class="mode-card">
-                <div class="mode-icon">💡</div>
-                <strong>Screen Lantern</strong>
-                <p>Full Display Boost</p>
-            </div>
-        </div>
-
-        <!-- ===== THERMAL SAFETY TIMER ===== -->
-        <div class="card">
-            <div class="card-header">
-                <span>⏱️ THERMAL SAFETY TIMER</span>
-                <span class="sub">Auto-shutoff</span>
-            </div>
-            <div class="presets">
-                <button>2 min</button>
-                <button class="active">5 min</button>
-                <button>10 min</button>
-                <button>Never</button>
-            </div>
-        </div>
-
-        <!-- ===== TOGGLES ===== -->
-        <div class="card toggles">
-            <div class="toggle-row">
-                <div class="toggle-info">
-                    <span class="toggle-icon">📳</span>
+            <!-- HEADER -->
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-icon">💡</div>
                     <div>
-                        <strong>Shake to Toggle</strong>
-                        <p>Accelerometer trigger</p>
+                        <h1>Lumos Torch</h1>
+                        <p>TORCH</p>
                     </div>
                 </div>
-                <div class="switch on"></div>
+                <div class="header-right">
+                    <span class="pill">● READY</span>
+                    <span class="pill">🔋 94%</span>
+                    <div class="avatar">👤</div>
+                </div>
+            </header>
+
+            <!-- NEW STATS -->
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-label">🌡️ THERMAL</span>
+                    <strong>31.4°C •</strong>
+                    <p>Normal</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">⚡ POWER</span>
+                    <strong>94% (4.1V)</strong>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">📷 CAMERA LED</span>
+                    <p class="active">● Active</p>
+                </div>
             </div>
-            <div class="toggle-row">
-                <div class="toggle-info">
-                    <span class="toggle-icon">🔊</span>
-                    <div>
-                        <strong>Tactile Haptics</strong>
-                        <p>Physical click response</p>
+
+            <!-- POWER -->
+            <div class="power-section">
+                <div class="power-ring">
+                    <div class="power-circle">
+                        <div class="power-icon">⏻</div>
                     </div>
                 </div>
-                <div class="switch on"></div>
+                <p class="power-label">POWER ON</p>
+                <div class="runtime-pill">🔄 Est. Runtime: 4h 18m remaining</div>
             </div>
+
+            <!-- LED LUMENS -->
+            <div class="card">
+                <div class="card-header">
+                    <span>📊 LED OUTPUT LUMENS</span>
+                    <span class="highlight">100% MAX</span>
+                </div>
+                <div class="presets">
+                    <button>25%</button>
+                    <button>50%</button>
+                    <button>75%</button>
+                    <button class="active">MAX</button>
+                </div>
+                <div class="slider-track">
+                    <div class="slider-fill"></div>
+                </div>
+            </div>
+
+            <!-- MODES -->
+            <div class="modes">
+                <div class="mode-card">
+                    <div class="mode-icon">SOS</div>
+                    <strong>SOS Morse</strong>
+                    <p>Hardware 3-3-3 Pulse</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">💡</div>
+                    <strong>Screen Lantern</strong>
+                    <p>Full Display Boost</p>
+                </div>
+            </div>
+
+            <!-- TIMER -->
+            <div class="card">
+                <div class="card-header">
+                    <span>⏱️ THERMAL SAFETY TIMER</span>
+                    <span class="sub">Auto-shutoff</span>
+                </div>
+                <div class="presets">
+                    <button>2 min</button>
+                    <button class="active">5 min</button>
+                    <button>10 min</button>
+                    <button>Never</button>
+                </div>
+            </div>
+
+            <!-- TOGGLES -->
+            <div class="card toggles">
+                <div class="toggle-row">
+                    <div class="toggle-info">
+                        <span class="toggle-icon">📳</span>
+                        <div>
+                            <strong>Shake to Toggle</strong>
+                            <p>Accelerometer trigger</p>
+                        </div>
+                    </div>
+                    <div class="switch on"></div>
+                </div>
+                <div class="toggle-row">
+                    <div class="toggle-info">
+                        <span class="toggle-icon">🔊</span>
+                        <div>
+                            <strong>Tactile Haptics</strong>
+                            <p>Physical click response</p>
+                        </div>
+                    </div>
+                    <div class="switch on"></div>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="info-card">
+                <p class="version">Lumos TorchCore v3.0 • Hardware Driver 14.2</p>
+                <p class="desc">Direct camera HAL flash control with dynamic thermal regulator</p>
+                <p class="links">
+                    <a href="#">Privacy Policy</a> •
+                    <a href="#">Terms of Service</a> •
+                    <a href="#">Hardware Support</a>
+                </p>
+                <p class="copyright">Lumos Labs Inc. All rights reserved.</p>
+            </div>
+
+            <!-- BOTTOM NAV -->
+            <nav class="bottom-nav">
+                <div class="nav-item active">
+                    <span>🔦</span>
+                    <p>Torch</p>
+                </div>
+                <div class="nav-item">
+                    <span>✳️</span>
+                    <p>Strobe</p>
+                </div>
+                <div class="nav-item">
+                    <span>💡</span>
+                    <p>Lantern</p>
+                </div>
+                <div class="nav-item">
+                    <span>⚙️</span>
+                    <p>Settings</p>
+                </div>
+            </nav>
+
+            <!-- SUB FOOTER -->
+            <footer class="sub-footer">
+                Privacy • Support • v2.4.0 (Build 418)
+                <br>
+                Lumos Labs Inc. • All rights reserved
+            </footer>
+
         </div>
-
-        <!-- ===== FOOTER INFO ===== -->
-        <div class="info-card">
-            <p class="version">Lumos TorchCore v3.0 • Hardware Driver 14.2</p>
-            <p class="desc">Direct camera HAL flash control with dynamic thermal regulator</p>
-            <p class="links">
-                <a href="#">Privacy Policy</a> •
-                <a href="#">Terms of Service</a> •
-                <a href="#">Hardware Support</a>
-            </p>
-            <p class="copyright">Lumos Labs Inc. All rights reserved.</p>
-        </div>
-
-        <!-- ===== BOTTOM NAV ===== -->
-        <nav class="bottom-nav">
-            <div class="nav-item active">
-                <span>🔦</span>
-                <p>Torch</p>
-            </div>
-            <div class="nav-item">
-                <span>✳️</span>
-                <p>Strobe</p>
-            </div>
-            <div class="nav-item">
-                <span>💡</span>
-                <p>Lantern</p>
-            </div>
-            <div class="nav-item">
-                <span>⚙️</span>
-                <p>Settings</p>
-            </div>
-        </nav>
-
-        <!-- ===== SUB FOOTER ===== -->
-        <footer class="sub-footer">
-            Privacy • Support • v2.4.0 (Build 418)
-            <br>
-            Lumos Labs Inc. • All rights reserved
-        </footer>
-
-    </div>
-</body>
+    </body>
 </html>

@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     max-width: 430px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
@@ -84,7 +84,7 @@ body {
     font-size: 16px;
 }
 
-/* ===== STATS ===== */
+/* STATS */
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -124,7 +124,7 @@ body {
     color: #f5a623;
 }
 
-/* ===== POWER BUTTON ===== */
+/* POWER */
 .power-section {
     text-align: center;
     margin-bottom: 25px;
@@ -177,7 +177,7 @@ body {
     margin-top: 12px;
 }
 
-/* ===== CARD (Generic) ===== */
+/* CARD */
 .card {
     background: white;
     border-radius: 20px;
@@ -206,7 +206,7 @@ body {
     font-weight: 500;
 }
 
-/* ===== PRESETS ===== */
+/* PRESETS */
 .presets {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -231,7 +231,7 @@ body {
     color: #f5a623;
 }
 
-/* ===== SLIDER ===== */
+/* SLIDER */
 .slider-track {
     height: 8px;
     background: #f0f0f0;
@@ -246,7 +246,7 @@ body {
     border-radius: 10px;
 }
 
-/* ===== MODES ===== */
+/* MODES */
 .modes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -287,7 +287,7 @@ body {
     color: #999;
 }
 
-/* ===== TOGGLES ===== */
+/* TOGGLES */
 .toggles {
     padding: 8px 16px;
 }
@@ -332,7 +332,6 @@ body {
     color: #999;
 }
 
-/* Switch */
 .switch {
     width: 44px;
     height: 24px;
@@ -362,7 +361,7 @@ body {
     left: 22px;
 }
 
-/* ===== INFO CARD ===== */
+/* INFO */
 .info-card {
     background: white;
     border-radius: 20px;
@@ -402,7 +401,7 @@ body {
     color: #bbb;
 }
 
-/* ===== BOTTOM NAV ===== */
+/* BOTTOM NAV */
 .bottom-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -437,7 +436,7 @@ body {
     font-weight: 700;
 }
 
-/* ===== SUB FOOTER ===== */
+/* SUB FOOTER */
 .sub-footer {
     text-align: center;
     font-size: 9px;
