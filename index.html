@@ -1,66 +1,117 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumos Torch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
 
-<html>
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Torch App</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
-    </head>
-
-    <body>
-
-        <div class="container">
-
-            <div class="top">
-
-                <span class="pp"><span class="material-symbols-outlined" >clear_day</span></span>
-
-                <div class="text1">
-                    <h1>Luminous Torch</h1>
-                    <p><span></span>Ultra Warm Beam Active</p>
-                </div>
-
-                <span class="ps">
-                    <span class="material-symbols-outlined">battery_charging_full</span>
-                    <span class="place"></span>
-                </span>
-
-            </div>
-
-            <div class="info">
-                <div class="plof">
-                    <div class="til">Routine</div>
-                    <div class="val" id="val1">44</div>
-                </div>
-                <div class="plof">
-                    <div class="til">Surface Temperature</div>
-                    <div class="val">55</div>
-                </div>
-                <div class="plof">
-                    <div class="til">Luminance</div>
-                    <div class="val">88</div>
-                </div>
-            </div>  
-            
-            <div class="torch">
-                <div class="lamp" id="pulseCircle">
-                    <span class="material-symbols-outlined">mode_off_on</span>
-                </div>
-                <div class="scril">
-                    <p><span></span>ON <span></span>100% beam Active</p>
-                    <p>Tap to switch to power off</p>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🔆</div>
+                <div class="logo-text">
+                    <h1>Lumos Torch</h1>
+                    <p>● Ultra Warm Beam Active</p>
                 </div>
             </div>
-            
+            <div class="battery">
+                🔋 88%
+            </div>
+        </header>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="stat-card">
+                <span>Runtime</span>
+                <strong>4h15m</strong>
+            </div>
+            <div class="stat-card">
+                <span>Surface Temp</span>
+                <strong>31°C</strong>
+            </div>
+            <div class="stat-card active">
+                <span>Luminance</span>
+                <strong>1,200 lm</strong>
+            </div>
         </div>
 
+        <!-- MAIN POWER BUTTON -->
+        <div class="power-section">
+            <div class="power-ring">
+                <div class="power-circle">
+                    <div class="power-icon">⏻</div>
+                    <p>POWER ON</p>
+                </div>
+            </div>
 
+            <div class="status-pill">
+                ● ON • 100% Beam Active
+            </div>
+            <p class="hint">Tap switch to power off</p>
+        </div>
 
-        <script src="script.js"></script>
-    </body>
+        <!-- ILLUMINATION POWER -->
+        <div class="illumination">
+            <div class="illum-header">
+                <span>⚙️ Illumination Power</span>
+                <span class="percent">100%</span>
+            </div>
 
+            <div class="slider-track">
+                <div class="slider-fill"></div>
+                <div class="slider-knob"></div>
+            </div>
+
+            <div class="presets">
+                <button>25%</button>
+                <button>50%</button>
+                <button>75%</button>
+                <button class="active">100%</button>
+            </div>
+        </div>
+
+        <!-- MODES -->
+        <div class="modes">
+            <div class="mode-card">
+                <div class="mode-icon red">✳️</div>
+                <div>
+                    <strong>SOS Beacon</strong>
+                    <p>Morse strobe</p>
+                </div>
+            </div>
+            <div class="mode-card">
+                <div class="mode-icon orange">💡</div>
+                <div>
+                    <strong>Lantern 360°</strong>
+                    <p>Soft diffuse</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM NAV -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <span>🔦</span>
+                <p>Torch</p>
+            </div>
+            <div class="nav-item">
+                <span>💡</span>
+                <p>Modes</p>
+            </div>
+            <div class="nav-item">
+                <span>⏱️</span>
+                <p>Timer</p>
+            </div>
+            <div class="nav-item">
+                <span>⚙️</span>
+                <p>Settings</p>
+            </div>
+        </nav>
+
+    </div>
+</body>
 </html>
