@@ -96,9 +96,9 @@ body {
     animation: blink 1.2s infinite;
 }
 
-.avatar {
+avatar {
     width: 34px;
-    height: 34px;
+    height: 20px;
     background: #6c5ce7;
     border-radius: 50%;
     display: flex;
@@ -111,6 +111,12 @@ body {
         0 4px 12px rgba(108, 92, 231, 0.3),
         0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.avatar {
+    color: #6c5ce7;
+}
+
+
 
 @keyframes blink {
     0%, 100% { opacity: 1; }

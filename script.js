@@ -11,6 +11,21 @@ function getDeviceName() {
     return "Device";
 }
 
+async function getPercentage() {
+    const battery = await navigator.getBattery();
+    return battery.level * 100;
+}
+
+getPercentage().then(lev => {
+    battery.textContent = lev "%";
+})
+
+
+const battery = document.querySelector(".bat");
 const avatar = document.querySelector(".avatar");
-avatar.textContent = getDeviceName()
+
+
+avatar.textContent = getDeviceName();
+
 console.log(getDeviceName())
+console.log(getPercentage())
