@@ -1,17 +1,200 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Torch App</title>
+    <title>Lumos Torch</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
-    <div class="container">
-      <h1>🔦 Torch</h1>
-      <button id="torchBtn">Turn ON</button>
-      <p id="status">Torch is OFF</p>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="logo">
+          <div class="logo-icon">
+            <span class="material-symbols-outlined logo">flare</span>
+          </div>
+
+          <div>
+            <h1>LuminousBeam</h1>
+            <p>TORCH</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="pill">
+            <span class="dot"></span>
+            READY
+          </span>
+
+          <span class="pill">
+            <span class="material-symbols-outlined head bat"
+              >battery_charging_full</span
+            >
+          </span>
+          <div class="pill">
+            <span class="dot"></span>
+            <span class="avatar"></span>
+          </div>
+        </div>
+      </header>
+
+      <!-- NEW STATS -->
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-label">
+            <span class="material-symbols-outlined">shutter_speed</span>
+            LOCAL TIME
+          </span>
+          <strong>
+            <div class="time"></div>
+          </strong>
+          <p class="period">Normal</p>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label"
+            ><span class="material-symbols-outlined">battery_android_plus</span>
+            POWER
+          </span>
+          <strong class="battery2"></strong>
+          <p class="charge">Normal</p>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">
+            <span class="material-symbols-outlined">assistant_navigation</span>
+            DIRECTION
+          </span>
+
+          <strong class="active">● Active</strong>
+          <p>Normal</p>
+        </div>
+      </div>
+
+      <!-- POWER -->
+      <div class="power-section">
+        <div class="power-ring">
+          <div class="power-circle">
+            <div class="power-icon">⏻</div>
+          </div>
+        </div>
+        <p class="power-label">POWER ON</p>
+        <div class="runtime-pill">🔄 Est. Runtime: 4h 18m remaining</div>
+      </div>
+
+      <!-- LED LUMENS -->
+      <div class="card">
+        <div class="card-header">
+          <span>📊 LED OUTPUT LUMENS</span>
+          <span class="highlight">100% MAX</span>
+        </div>
+        <div class="presets">
+          <button>25%</button>
+          <button>50%</button>
+          <button>75%</button>
+          <button class="active">MAX</button>
+        </div>
+        <div class="slider-track">
+          <div class="slider-fill"></div>
+        </div>
+      </div>
+
+      <!-- MODES -->
+      <div class="modes">
+        <div class="mode-card">
+          <div class="mode-icon">SOS</div>
+          <strong>SOS Morse</strong>
+          <p>Hardware 3-3-3 Pulse</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon">💡</div>
+          <strong>Screen Lantern</strong>
+          <p>Full Display Boost</p>
+        </div>
+      </div>
+
+      <!-- TIMER -->
+      <div class="card">
+        <div class="card-header">
+          <span>⏱️ THERMAL SAFETY TIMER</span>
+          <span class="sub">Auto-shutoff</span>
+        </div>
+        <div class="presets">
+          <button>2 min</button>
+          <button class="active">5 min</button>
+          <button>10 min</button>
+          <button>Never</button>
+        </div>
+      </div>
+
+      <!-- TOGGLES -->
+      <div class="card toggles">
+        <div class="toggle-row">
+          <div class="toggle-info">
+            <span class="toggle-icon">📳</span>
+            <div>
+              <strong>Shake to Toggle</strong>
+              <p>Accelerometer trigger</p>
+            </div>
+          </div>
+          <div class="switch on"></div>
+        </div>
+        <div class="toggle-row">
+          <div class="toggle-info">
+            <span class="toggle-icon">🔊</span>
+            <div>
+              <strong>Tactile Haptics</strong>
+              <p>Physical click response</p>
+            </div>
+          </div>
+          <div class="switch on"></div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="info-card">
+        <p class="version">Lumos TorchCore v3.0 • Hardware Driver 14.2</p>
+        <p class="desc">
+          Direct camera HAL flash control with dynamic thermal regulator
+        </p>
+        <p class="links">
+          <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a> •
+          <a href="#">Hardware Support</a>
+        </p>
+        <p class="copyright">Lumos Labs Inc. All rights reserved.</p>
+      </div>
+
+      <!-- BOTTOM NAV -->
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <span>🔦</span>
+          <p>Torch</p>
+        </div>
+        <div class="nav-item">
+          <span>✳️</span>
+          <p>Strobe</p>
+        </div>
+        <div class="nav-item">
+          <span>💡</span>
+          <p>Lantern</p>
+        </div>
+        <div class="nav-item">
+          <span>⚙️</span>
+          <p>Settings</p>
+        </div>
+      </nav>
+
+      <!-- SUB FOOTER -->
+      <footer class="sub-footer">
+        Privacy • Support • v2.4.0 (Build 418)
+        <br />
+        Lumos Labs Inc. • All rights reserved
+      </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
