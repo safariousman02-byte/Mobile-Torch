@@ -17,15 +17,39 @@ async function getPercentage() {
 }
 
 getPercentage().then(lev => {
-    battery.textContent = lev "%";
+    battery.textContent = lev + "%";
+    battery2.textContent = lev + "%";
+    console.log(getPercentage())
+
+
 })
+
 
 
 const battery = document.querySelector(".bat");
 const avatar = document.querySelector(".avatar");
+const localeTime = document.querySelector(".time")
+const battery2 = document.querySelector(".battery2");
 
 
 avatar.textContent = getDeviceName();
-
 console.log(getDeviceName())
-console.log(getPercentage())
+
+function getTime(){
+    const time = new Date();
+    console.log(time.toLocaleTimeString())
+
+    return time.toLocaleTimeString();
+}
+localeTime.textContent = getTime()
+
+
+async function getCharging() {
+    const charge = await navigator.getBattery();
+    const text = document.querySelector(".charge");
+
+    charge.charging ? text.textContent = "Charging" : text.textContent = "Descharging"
+
+}
+
+console.log("jack a dit..")
