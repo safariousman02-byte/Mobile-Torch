@@ -1,3 +1,14 @@
+
+
+const period = document.querySelector(".period");
+const battery = document.querySelector(".bat");
+const avatar = document.querySelector(".avatar");
+const localeTime = document.querySelector(".time")
+const battery2 = document.querySelector(".battery2");
+const position = document.querySelector(".active");
+
+
+
 function getDeviceName() {
     const name = navigator.userAgent;
 
@@ -20,16 +31,10 @@ getPercentage().then(lev => {
     battery.textContent = lev + "%";
     battery2.textContent = lev + "%";
     console.log(getPercentage())
+    getCharging();
 
 
 })
-
-
-
-const battery = document.querySelector(".bat");
-const avatar = document.querySelector(".avatar");
-const localeTime = document.querySelector(".time")
-const battery2 = document.querySelector(".battery2");
 
 
 avatar.textContent = getDeviceName();
@@ -38,6 +43,17 @@ console.log(getDeviceName())
 function getTime(){
     const time = new Date();
     console.log(time.toLocaleTimeString())
+    
+
+    console.log(time.getHours());
+
+    const pin = new Date().getHours();
+    console.log(pin)
+
+    if(pin < 12) period.textContent = "Morning";
+    if(pin < 17) period.textContent = "Afternoon";
+    if(pin < 21) period.textContent = "Morning";
+    if(pin < 00) period.textContent = "Night";
 
     return time.toLocaleTimeString();
 }
@@ -52,4 +68,27 @@ async function getCharging() {
 
 }
 
+function getDirection() {
+    window.addEventListener('deviceorientationabsolute', (e)  => {
+    
+        const head = e.alpha;
+        const dir = getCompasDirection(head);
+        document.querySelector(".active").textContent = dir;
+    });
+}
+
+function getCompasDirection(deg) {
+    if (deg >= 337.5 || deg < 22.5)  return "North";
+    if (deg >= 22.5 && deg < 67.5)   return "North-East";
+    if (deg >= 67.5 && deg < 112.5)  return "East";
+    if (deg >= 112.5 && deg < 157.5) return "South-East";
+    if (deg >= 157.5 && deg < 202.5) return "South";
+    if (deg >= 202.5 && deg < 247.5) return "South-West";
+    if (deg >= 247.5 && deg < 292.5) return "West";
+    return "North-West";
+}
+
+getDirection()
+
 console.log("jack a dit..")
+
