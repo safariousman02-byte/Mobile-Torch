@@ -28,12 +28,12 @@ powerBtn.addEventListener("click", async () => {
       // TURN OFF
     } else {
       await track.applyConstraints({
-        advanced: [{ torch: false }], // ✅ false, not true
+        advanced: [{ torch: false }],
       });
 
-      stream.getTracks().forEach((t) => t.stop()); // ✅ stop tracks
+      stream.getTracks().forEach((t) => t.stop());
 
-      isOn = false; // ✅ false
+      isOn = false;
       powerOn.textContent = "POWERED OFF";
     }
   } catch (error) {
@@ -42,19 +42,17 @@ powerBtn.addEventListener("click", async () => {
 });
 
 async function getBatteryLevel() {
+  if (!navigator.getBattery) {
+    battery.forEach((b) => (b.textContent = "...%"));
+    return;
+  }
+
   const bat = await navigator.getBattery();
-  const lev = Math.round(bat.level * 100) + "%";
 
   function update() {
-    if (!navigator.getBattery) {
-      battery.forEach((b) => (b.textContent = "...%"));
-    }
+    const lev = Math.round(bat.level * 100) + "%";
 
-    try {
-      battery.forEach((b) => (b.textContent = lev));
-    } catch (e) {
-      battery.forEach((b) => (b.textContent = "...%"));
-    }
+    battery.forEach((b) => (b.textContent = lev));
   }
 
   update();
@@ -64,21 +62,22 @@ async function getBatteryLevel() {
 }
 
 async function detectCharge() {
+  if (!navigator.getBattery) {
+    detect.textContent = "--";
+    return;
+  }
+
   const batt = await navigator.getBattery();
 
   function update() {
     if (batt.charging) {
       detect.textContent = "Charging";
+    } else if (batt.level === 1) {
+      detect.textContent = "Full";
+    } else if (batt.level <= 0.2) {
+      detect.textContent = "Low";
     } else {
       detect.textContent = "Discharging";
-    }
-
-    if (batt.level === 1) {
-      detect.textContent = "Full";
-    }
-
-    if (batt.level <= 0.2) {
-      detect.textContent = "Low";
     }
 
     console.log(batt.level);
@@ -87,14 +86,15 @@ async function detectCharge() {
   update();
 
   batt.addEventListener("chargingchange", update);
+  batt.addEventListener("levelchange", update);
 }
 
 function getTime() {
-  const times = new Date();
-
-  time.textContent = times.toLocaleTimeString();
+  time.textContent = new Date().toLocaleTimeString();
 }
+
+setInterval(getTime, 1000);
+getTime();
 
 getBatteryLevel();
 detectCharge();
-getTime();
