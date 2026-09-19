@@ -8,16 +8,15 @@ let stream = null;
 let track = null;
 let isOn = false;
 
-powerBtn.onclick = console.log("hey");
-
 powerBtn.addEventListener("click", async () => {
   try {
+    // TURN ON
     if (!isOn) {
       stream = await navigator.mediaDevices.getUserMedia({
         video: { facingMode: "environment" },
       });
 
-      track = stream.getVideoTracks()[0];
+      track = stream.getVideoTracks()[0]; // ✅ video, not audio
 
       await track.applyConstraints({
         advanced: [{ torch: true }],
@@ -25,14 +24,16 @@ powerBtn.addEventListener("click", async () => {
 
       isOn = true;
       powerOn.textContent = "POWERED ON";
+
+      // TURN OFF
     } else {
       await track.applyConstraints({
-        advanced: [{ torch: false }],
+        advanced: [{ torch: false }], // ✅ false, not true
       });
 
-      stream.getTracks().forEach((r) => r.stop());
+      stream.getTracks().forEach((t) => t.stop()); // ✅ stop tracks
 
-      isOn = false;
+      isOn = false; // ✅ false
       powerOn.textContent = "POWERED OFF";
     }
   } catch (error) {
