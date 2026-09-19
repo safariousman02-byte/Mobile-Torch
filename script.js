@@ -17,7 +17,7 @@ powerBtn.addEventListener("click", async () => {
         video: { facingMode: "environment" },
       });
 
-      track = stream.getAudioTracks()[0];
+      track = stream.getVideoTracks()[0];
 
       await track.applyConstraints({
         advanced: [{ torch: true }],
@@ -27,12 +27,12 @@ powerBtn.addEventListener("click", async () => {
       powerOn.textContent = "POWERED ON";
     } else {
       await track.applyConstraints({
-        advanced: [{ torch: true }],
+        advanced: [{ torch: false }],
       });
 
-      stream.getTracks().forEach((r) => r.scrollTop());
+      stream.getTracks().forEach((r) => r.stop());
 
-      isOn = true;
+      isOn = false;
       powerOn.textContent = "POWERED OFF";
     }
   } catch (error) {
