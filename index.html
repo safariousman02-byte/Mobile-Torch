@@ -26,10 +26,12 @@
         </div>
         <div class="header-right">
           <span class="pill"><span class="dot"></span> READY</span>
-          <span class="pill"
-            ><span class="material-symbols-rounded">battery_charging_full</span>
-            94%</span
-          >
+          <span class="pill">
+            <span class="material-symbols-rounded">
+              battery_charging_full
+            </span>
+            <div class="batLev"></div>
+          </span>
           <div class="avatar">O</div>
         </div>
       </header>
@@ -44,12 +46,17 @@
           <strong>31.4°C •</strong>
           <p>Normal</p>
         </div>
+
         <div class="stat-card">
-          <span class="stat-label"
-            ><span class="material-symbols-rounded">bolt</span> POWER</span
-          >
-          <strong>94% (4.1V)</strong>
+          <span class="stat-label">
+            <span class="material-symbols-rounded">battery_charging_full</span>
+            BATTERY LEVEL
+          </span>
+
+          <strong class="batLev"></strong>
+          <p class="detectCharge">Normal</p>
         </div>
+
         <div class="stat-card">
           <span class="stat-label"
             ><span class="material-symbols-rounded">photo_camera</span> CAMERA
@@ -196,5 +203,7 @@
         LuminousBeam Labs Inc. • All rights reserved
       </footer>
     </div>
+
+    <script src="/script.js"></script>
   </body>
 </html>
