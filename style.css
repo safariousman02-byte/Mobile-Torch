@@ -1,44 +1,97 @@
 body {
-  background: #1a1a1a;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  padding-top: 100px;
-  margin: 0;
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.container {
-  max-width: 300px;
-  margin: auto;
+.bg-app {
+  background: linear-gradient(180deg, #ebf0f6 0%, #e2e8f0 100%);
 }
 
-h1 {
-  font-size: 40px;
-  margin-bottom: 30px;
+/* Neumorphic Shadows - Raised / Outset Elements */
+.neu-flat {
+  background: #e8eef5;
+  box-shadow:
+    6px 6px 14px rgba(166, 180, 200, 0.45),
+    -6px -6px 14px rgba(255, 255, 255, 0.85);
 }
 
-button {
-  padding: 20px 40px;
-  font-size: 20px;
-  border: none;
-  border-radius: 50px;
-  background: #ffcc00;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+.neu-flat-sm {
+  background: #e8eef5;
+  box-shadow:
+    3px 3px 8px rgba(166, 180, 200, 0.4),
+    -3px -3px 8px rgba(255, 255, 255, 0.8);
 }
 
-button:active {
-  transform: scale(0.95);
+/* Neumorphic Inset / Concave Elements */
+.neu-pressed {
+  background: #e4ebf3;
+  box-shadow:
+    inset 3px 3px 6px rgba(166, 180, 200, 0.5),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
-button.on {
-  background: #fff;
-  box-shadow: 0 0 30px #ffcc00;
+/* Concentric Central Power Ring Dial Styles */
+.power-outer-ring {
+  background: #e8eef5;
+  box-shadow:
+    12px 12px 28px rgba(166, 180, 200, 0.5),
+    -12px -12px 28px rgba(255, 255, 255, 0.9);
 }
 
-#status {
-  margin-top: 20px;
-  color: #888;
+.power-mid-ring {
+  background: #e4ebf3;
+  box-shadow:
+    inset 5px 5px 12px rgba(166, 180, 200, 0.45),
+    inset -5px -5px 12px rgba(255, 255, 255, 0.85);
+}
+
+.power-inner-btn {
+  background: #eaf0f7;
+  box-shadow:
+    8px 8px 18px rgba(166, 180, 200, 0.5),
+    -8px -8px 18px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.power-inner-btn.active {
+  box-shadow:
+    4px 4px 10px rgba(166, 180, 200, 0.4),
+    -4px -4px 10px rgba(255, 255, 255, 0.8),
+    0 0 25px rgba(245, 158, 11, 0.45);
+}
+
+.glow-orange {
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.55);
+}
+
+/* Toggle Switches */
+.toggle-switch-bg {
+  background: #dce3ed;
+  box-shadow:
+    inset 2px 2px 5px rgba(166, 180, 200, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  transition: background 0.3s ease;
+}
+
+.toggle-switch-bg.active {
+  background: #4f46e5;
+}
+
+.toggle-switch-thumb {
+  box-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.2),
+    -1px -1px 3px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.mobile-container {
+  max-width: 440px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
