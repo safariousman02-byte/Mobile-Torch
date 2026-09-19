@@ -37,7 +37,6 @@ powerBtn.addEventListener("click", async () => {
     }
   } catch (error) {
     powerOn.textContent = error.message;
-    console.error(error);
   }
 });
 
